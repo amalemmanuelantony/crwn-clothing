@@ -1,12 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
 import HomePage from './pages/homepage/HomePage';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Header from "./components/header/Header";
 import SignInAndSignUpPage from './pages/sign-in/SignIn';
 import ShopPage from "./pages/shop/Shop";
 import React from 'react';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { connect } from "react-redux";
+import { setCurrentUser } from "./redux/user/user.actions";
 
 class App extends React.Component {
   constructor() {
@@ -20,6 +22,9 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
+
+    const { setCurrentUser } = this.props;
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       // createUserProfileDocument(user);
       // console.log(user);
@@ -28,18 +33,15 @@ class App extends React.Component {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot(onSnapshot => {
-          this.setState({
-            currentUser: {
-              id: onSnapshot.id,
-              ...onSnapshot.data()
-            }
-          }, () => {
-            // console.log(th is.state);
-          });
+          setCurrentUser({
+            id: onSnapshot.id,
+            ...onSnapshot.data()
+          })
         });
       }
-
-      this.setState({ currentUser: userAuth });
+      // console.log("Reached");
+      // console.log(userAuth)
+      setCurrentUser(userAuth);
     })
   }
 
@@ -56,7 +58,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/shop" component={ShopPage} />
-            <Route exact path="/signin" component={SignInAndSignUpPage} />
+            <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to="/" />) : (<SignInAndSignUpPage />)} />
           </Switch>
         </div >
       </div >
@@ -65,4 +67,12 @@ class App extends React.Component {
 
 }
 
-export default App;
+const mapStateToProps = ({ user }) => ({
+  currentUser: user.currentUser
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
