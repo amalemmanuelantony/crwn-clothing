@@ -66,49 +66,49 @@ const SHOP_DATA = [
         routeName: 'sneakers',
         items: [
             {
-                id: 1,
+                id: 10,
                 name: 'Adidas NMD',
                 imageUrl: window.location.origin + '/images/shop-img/sneakers/adidas-nmd.png',
                 price: 220
             },
             {
-                id: 2,
+                id: 11,
                 name: 'Adidas Yeezy',
                 imageUrl: window.location.origin + '/images/shop-img/sneakers/yeezy.png',
                 price: 280
             },
             {
-                id: 3,
+                id: 12,
                 name: 'Black Converse',
                 imageUrl: window.location.origin + '/images/shop-img/sneakers/black-converse.png',
                 price: 110
             },
             {
-                id: 4,
+                id: 13,
                 name: 'Nike White AirForce',
                 imageUrl: window.location.origin + '/images/shop-img/sneakers/white-nike-high-tops.png',
                 price: 160
             },
             {
-                id: 5,
+                id: 14,
                 name: 'Nike Red High Tops',
                 imageUrl: window.location.origin + '/images/shop-img/sneakers/nikes-red.png',
                 price: 160
             },
             {
-                id: 6,
+                id: 15,
                 name: 'Nike Brown High Tops',
                 imageUrl: window.location.origin + '/images/shop-img/sneakers/nike-brown.png',
                 price: 160
             },
             {
-                id: 7,
+                id: 16,
                 name: 'Air Jordan Limited',
                 imageUrl: window.location.origin + '/images/shop-img/sneakers/nike-funky.png',
                 price: 190
             },
             {
-                id: 8,
+                id: 17,
                 name: 'Timberlands',
                 imageUrl: window.location.origin + '/images/shop-img/sneakers/timberlands.png',
                 price: 200
@@ -121,31 +121,31 @@ const SHOP_DATA = [
         routeName: 'jackets',
         items: [
             {
-                id: 1,
+                id: 18,
                 name: 'Black Jean Shearling',
                 imageUrl: window.location.origin + '/images/shop-img/jackets/black-shearling.png',
                 price: 125
             },
             {
-                id: 2,
+                id: 19,
                 name: 'Blue Jean Jacket',
                 imageUrl: window.location.origin + '/images/shop-img/jackets/blue-jean-jacket.png',
                 price: 90
             },
             {
-                id: 3,
+                id: 20,
                 name: 'Grey Jean Jacket',
                 imageUrl: window.location.origin + '/images/shop-img/jackets/grey-jean-jacket.png',
                 price: 90
             },
             {
-                id: 4,
+                id: 21,
                 name: 'Brown Shearling',
                 imageUrl: window.location.origin + '/images/shop-img/jackets/brown-shearling.png',
                 price: 165
             },
             {
-                id: 5,
+                id: 22,
                 name: 'Tan Trench',
                 imageUrl: window.location.origin + '/images/shop-img/jackets/brown-trench.png',
                 price: 185
@@ -158,43 +158,43 @@ const SHOP_DATA = [
         routeName: 'womens',
         items: [
             {
-                id: 1,
+                id: 23,
                 name: 'Blue Tanktop',
                 imageUrl: window.location.origin + '/images/shop-img/womens/blue-tank.png',
                 price: 25
             },
             {
-                id: 2,
+                id: 24,
                 name: 'Floral Blouse',
                 imageUrl: window.location.origin + '/images/shop-img/womens/floral-blouse.png',
                 price: 20
             },
             {
-                id: 3,
+                id: 25,
                 name: 'Floral Dress',
                 imageUrl: window.location.origin + '/images/shop-img/womens/floral-skirt.png',
                 price: 80
             },
             {
-                id: 4,
+                id: 26,
                 name: 'Red Dots Dress',
                 imageUrl: window.location.origin + '/images/shop-img/womens/red-polka-dot-dress.png',
                 price: 80
             },
             {
-                id: 5,
+                id: 27,
                 name: 'Striped Sweater',
                 imageUrl: window.location.origin + '/images/shop-img/womens/striped-sweater.png',
                 price: 45
             },
             {
-                id: 6,
+                id: 28,
                 name: 'Yellow Track Suit',
                 imageUrl: window.location.origin + '/images/shop-img/womens/yellow-track-suit.png',
                 price: 135
             },
             {
-                id: 7,
+                id: 29,
                 name: 'White Blouse',
                 imageUrl: window.location.origin + '/images/shop-img/womens/white-vest.png',
                 price: 20
@@ -207,37 +207,37 @@ const SHOP_DATA = [
         routeName: 'mens',
         items: [
             {
-                id: 1,
+                id: 30,
                 name: 'Camo Down Vest',
                 imageUrl: window.location.origin + '/images/shop-img/mens/camo-vest.png',
                 price: 325
             },
             {
-                id: 2,
+                id: 31,
                 name: 'Floral T-shirt',
                 imageUrl: window.location.origin + '/images/shop-img/mens/floral-shirt.png',
                 price: 20
             },
             {
-                id: 3,
+                id: 32,
                 name: 'Black & White Longsleeve',
                 imageUrl: window.location.origin + '/images/shop-img/mens/long-sleeve.png',
                 price: 25
             },
             {
-                id: 4,
+                id: 33,
                 name: 'Pink T-shirt',
                 imageUrl: window.location.origin + '/images/shop-img/mens/pink-shirt.png',
                 price: 25
             },
             {
-                id: 5,
+                id: 34,
                 name: 'Jean Long Sleeve',
                 imageUrl: window.location.origin + '/images/shop-img/mens/roll-up-jean-shirt.png',
                 price: 40
             },
             {
-                id: 6,
+                id: 35,
                 name: 'Burgundy T-shirt',
                 imageUrl: window.location.origin + '/images/shop-img/mens/polka-dot-shirt.png',
                 price: 25
